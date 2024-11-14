@@ -9,6 +9,7 @@
   overflow: hidden;
   font-size: $default-font-size;
   transform: skewX(-12deg);
+  backface-visibility: hidden;
 
   & > * {
     transform: skewX(12deg);
@@ -18,11 +19,13 @@
     width: 15rem;
     height: 15rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative;
+    backface-visibility: hidden;
+    transition: 0.3s all;
   }
   &__img {
     height: 100%;
@@ -41,13 +44,14 @@
     font-size: 1.7rem;
     text-align: center;
     text-transform: uppercase;
+    visibility: hidden;
+
     opacity: 0;
-    transition: all 0.5s;
-    backface-visibility: hidden;
   }
 
   &:hover &__caption {
     transform: translate(-50%, -50%);
+    visibility: visible;
     opacity: 1;
   }
 
