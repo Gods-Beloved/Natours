@@ -15,7 +15,7 @@
     z-index: 2000;
     cursor: pointer;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
-    transition: all 0.3s;
+    transition: all 0.8s;
   }
 
   &__background {
@@ -115,6 +115,7 @@
       height: 0.2rem;
       background-color: $color-dark-grey-3;
       display: inline-block;
+      transition: all 0.3s;
     }
 
     &::before,
@@ -125,10 +126,10 @@
     }
 
     &::before {
-      top: 0.8rem;
+      top: -0.8rem;
     }
     &::after {
-      top: -0.8rem;
+      top: 0.8rem;
     }
   }
 

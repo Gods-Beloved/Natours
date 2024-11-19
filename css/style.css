@@ -575,7 +575,7 @@ body {
   z-index: 2000;
   cursor: pointer;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-  transition: all 0.3s; }
+  transition: all 0.8s; }
 
 .navigation__background {
   z-index: 1000;
@@ -644,15 +644,16 @@ body {
     width: 3rem;
     height: 0.2rem;
     background-color: #333;
-    display: inline-block; }
+    display: inline-block;
+    transition: all 0.3s; }
   .navigation__icon::before, .navigation__icon::after {
     content: "";
     position: absolute;
     left: 0; }
   .navigation__icon::before {
-    top: 0.8rem; }
-  .navigation__icon::after {
     top: -0.8rem; }
+  .navigation__icon::after {
+    top: 0.8rem; }
 
 .navigation__button:hover .navigation__icon::before {
   top: -1rem; }
@@ -710,6 +711,71 @@ body {
     width: 75%;
     display: inline-block;
     float: right; }
+
+.popup {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 4000;
+  transition: all 0.3s; }
+  .popup__close {
+    right: 2.5rem;
+    top: 2.5rem;
+    position: absolute; }
+    .popup__close:link, .popup__close:visited {
+      text-decoration: none;
+      color: #333;
+      font-size: 3rem;
+      display: inline-block;
+      line-height: 1; }
+    .popup__close:hover {
+      color: #55c57a; }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }
+  .popup__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 75%;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    display: table;
+    overflow: hidden;
+    transition: all 0.4s 0.2s;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5); }
+  .popup:target .popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); }
+  .popup__left {
+    width: 33.3%;
+    display: table-cell; }
+  .popup__right {
+    width: 66.6%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem; }
+  .popup__img {
+    display: block;
+    width: 100%; }
+  .popup__text {
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    column-count: 2;
+    column-gap: 4rem;
+    column-rule: 1px solid #999;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto; }
 
 .bg-video {
   position: absolute;
