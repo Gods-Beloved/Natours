@@ -8,12 +8,8 @@ Dark green: #28b485
 */
 
 /* Performing basic reset */
-
-@import "base/base";
 @import "abstracts/variables";
 @import "base/animations";
-@import "base/typography";
-@import "base/utilities";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "components/button";
@@ -28,6 +24,11 @@ Dark green: #28b485
 @import "layout/navigation";
 @import "layout/footer";
 @import "components/popup";
-@import "components/bg-video"; /* .logo:hover {
+@import "components/bg-video";
+@import "base/utilities";
+@import "base/base";
+@import "base/typography";
+
+/* .logo:hover {
   animation: moveInRight 2s ease-in;
 } */
